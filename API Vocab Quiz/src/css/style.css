@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Antonio&family=Oxygen:wght@300;400;700&display=swap");
 
 :root {
+  /* fonts */
   --font-body: "Oxygen", sans-serif;
   --font-headline: "Antonio", sans-serif;
   /* colors */
@@ -19,10 +20,13 @@
   --duration: 0.5s;
 }
 
+/* hamburger menu */
 .menu-icon {
   margin-top: 20px;
   z-index: 2;
-  position: relative;
+  transform: translate(0, 0);
+  transition: transform var(--duration_) ease;
+  justify-content: end;
 }
 
 .menu-icon:hover,
@@ -42,11 +46,6 @@
   background-color: black;
 }
 
-.menu-icon {
-  transform: translate(0, 0);
-  transition: transform var(--duration_) ease;
-}
-
 .menu-icon::before {
   content: "";
   transform: translate(0, -230%);
@@ -60,13 +59,38 @@
   transition: transform var(--duration_);
 }
 
+.menu-icon.open::before {
+  transform: translate(0, 0) rotate(45deg);
+  opacity: 0;
+  background-color: var(--secondary-color);
+}
+
+.menu-icon.open:after {
+  transform: translate(0, -96%) rotate(90deg);
+  background-color: var(--secondary-color);
+}
+
+.menu-icon.open {
+  transform: translate(-390%, 50px) rotate(45deg);
+  background-color: var(--secondary-color);
+}
+
+.menu-icon.open:hover,
+.menu-icon.open:hover:before,
+.menu-icon.open:hover:after {
+  cursor: pointer;
+  background-color: black;
+}
+
 .sidebar {
   background: var(--quaternary-color);
   color: var(--secondary-color);
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: -230px;
+  height: 50vh;
+  width: 0;
+  position:absolute;
+  top: 4em;
+  left: 1230px;
+  right: 500px;
   padding-left: 30px;
   padding-top: 50px;
   padding-right: 100px;
@@ -83,37 +107,16 @@
   color: white;
 }
 
-.menu-icon.open::before {
-  transform: translate(0, 0) rotate(45deg);
-  opacity: 0;
-  background-color: var(--secondary-color);
-}
-
-.menu-icon.open:after {
-  transform: translate(0, -96%) rotate(90deg);
-  background-color: var(--secondary-color);
-}
-
-.menu-icon.open {
-  transform: translate(490%, 0) rotate(45deg);
-  background-color: var(--secondary-color);
-}
-
-.menu-icon.open:hover,
-.menu-icon.open:hover:before,
-.menu-icon.open:hover:after {
-  cursor: pointer;
-  background-color: black;
-}
-
 .sidebar.open {
-  left: 0;
+  left: 75vw;
+  width: 20vw;
 }
 
 * {
   box-sizing: border-box;
 }
 
+/* body */
 body {
   margin: 0;
   font-family: var(--font-body);
@@ -143,7 +146,9 @@ h1 {
   font-weight: 100;
   margin: 0px;
 }
+/* header */
 header {
+  display: flex;
   background-color: var(--primary-color);
   margin-top: 1em;
   margin-right: 1em;
@@ -152,10 +157,9 @@ header {
 }
 
 #tagline {
-  justify-content: left;
   font-family: var(--font-body);
 }
-
+/* 
 .logo {
   line-height: 60px;
   width: 245px;
@@ -207,4 +211,4 @@ header {
 
 .logo--square > div {
   margin-top: -1.7em;
-}
+} */
