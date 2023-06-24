@@ -3,16 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vocab Quiz | Home</title>
+    <title>Word Quiz | Home</title>
     <link rel="stylesheet" href="/css/style.css" />
-    <script src="/js/main.js" type="module"></script>
+    <script>
+      function toggleNav() {
+           var updateElement = document.getElementById("menu-icon");
+           var sidebar = document.getElementById("sidebar");
+           updateElement.classList.toggle("open");
+           sidebar.classList.toggle("open");
+         }
+    </script>
   </head>
   <body>
-    <header class="divider" id="main-header"> <h1>VOCAB QUIZ</h1> </header>
-    <main class="divider">
-      <div class="hero">
-        <h1>VOCAB QUIZ</h1>
+    <header class="divider" id="main-header">
+      <h1 class="heading" id="site-name">WORD QUIZ</h1>
+      <p class="paragraph" id="tagline">
+        Test your knowledge of random vocabulary!
+      </p>
+      <div class="menu-icon" id="menu-icon" onclick="toggleNav()">
+        <span></span>
       </div>
+
+      <div class="sidebar" id="sidebar">
+        <ul>
+          <li>One</li>
+          <li>Two</li>
+          <li>Three</li>
+          <li>Four</li>
+        </ul>
+      </div>
+    </header>
+    <main class="main-content">
+      <div id="quiz"></div>
+      <button id="submit">Get Results</button>
+      <div id="results"></div>
     </main>
     <footer id="main-footer"></footer>
   </body>
