@@ -1,3 +1,6 @@
-import { toggleNav } from "./utils";
+import { toggleNav } from "./utils.mjs";
+import {quizTemplate, scoring} from "./quiz.mjs";
 
-toggleNav();
+document.querySelector("#menu-icon").onclick = toggleNav;
+quizTemplate()
+scoring()

@@ -25,10 +25,8 @@
         </ul>
       </div>
     </header>
-    <main class="main-content" id="mainLogin">       
-      <h1>Please login to play!</h1>
-
-      <form class="loginForm" id="loginForm" action="">
+    <main class="main-content">
+      <form class="signupForm" id="signupForm" action="">
         <label for="email"><b>Email</b></label>
         <input
           id="email"
@@ -38,7 +36,7 @@
           required
         />
 
-        <label for="pass" id="passwordLabel"><b>Password</b></label>
+        <label for="pass"><b>Password</b></label>
         <input
           id="pass"
           type="password"
@@ -46,16 +44,23 @@
           name="pass"
           required
         />
-        <br>
-        <button type="submit" id="login">Login</button>
+
+        <label for="name"><b>Name</b></label>
+        <input
+          id="name"
+          type="text"
+          placeholder="Enter Name"
+          name="name"
+          required
+        />
+        <button type="submit">Create Account</button>
       </form>
-      <a id="signUpLink" href="./signup.html">Not a member yet? Sign up here!</a>
     </main>
     <footer id="main-footer"></footer>
   </body>
 </html>
 
-<script src="./js/login.mjs" type="module"></script>
+<script src="./js/signup.mjs" type="module"></script>
 <script type="module">
   import { toggleNav } from "./js/utils.mjs";
   document.querySelector("#menu-icon").onclick = toggleNav;

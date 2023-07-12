@@ -20,42 +20,21 @@
       <div class="sidebar" id="sidebar">
         <ul>
           <li><a href="quiz.html">quiz</a></li>
-          <li><a href="results.html">scoresheet</a></li>
+          <li class="active"><a href="results.html">scoresheet</a></li>
           <li><a href="logout.html">logout</a></li>
         </ul>
       </div>
     </header>
-    <main class="main-content" id="mainLogin">       
-      <h1>Please login to play!</h1>
-
-      <form class="loginForm" id="loginForm" action="">
-        <label for="email"><b>Email</b></label>
-        <input
-          id="email"
-          type="text"
-          placeholder="Enter Email"
-          name="email"
-          required
-        />
-
-        <label for="pass" id="passwordLabel"><b>Password</b></label>
-        <input
-          id="pass"
-          type="password"
-          placeholder="Enter Password"
-          name="pass"
-          required
-        />
-        <br>
-        <button type="submit" id="login">Login</button>
-      </form>
-      <a id="signUpLink" href="./signup.html">Not a member yet? Sign up here!</a>
+    <main class="main-content">
+      <h2>Here are your previous saved scores!</h2>
+      <div id="scoreSheet"></div>
+      <button id="submit">Erase All</button>
+      <div id="results"></div>
     </main>
     <footer id="main-footer"></footer>
   </body>
 </html>
-
-<script src="./js/login.mjs" type="module"></script>
+<script type="module" src="./js/scoresheet.mjs"></script>
 <script type="module">
   import { toggleNav } from "./js/utils.mjs";
   document.querySelector("#menu-icon").onclick = toggleNav;
