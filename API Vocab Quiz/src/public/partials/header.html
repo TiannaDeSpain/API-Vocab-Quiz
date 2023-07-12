@@ -1,0 +1,18 @@
+<img class="logo" src="/images/icon.png" />
+<h1 class="heading" id="site-name">WORD QUIZ</h1>
+<p class="paragraph" id="tagline">
+  Test your knowledge of random vocabulary!
+</p>
+<div class="menu-icon" id="menu-icon" onclick="toggleNav()">
+  <p id="hamwords" class="hamwords" onclick="toggleNav()">menu</p>
+</div>
+
+<div class="sidebar" id="sidebar">
+  <ul>
+    <li><a href="quiz.html">quiz</a></li>
+    <li><a href="results.html">scoresheet</a></li>
+    <li><a href="logout.html">logout</a></li>
+  </ul>
+</div>
+<script>import { toggleNav } from "./js/utils.mjs";
+    document.querySelector("#menu-icon").onclick = toggleNav; </script>

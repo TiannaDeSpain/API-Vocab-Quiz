@@ -9,23 +9,24 @@
 </head>
 
 <body>
-  <header class="divider" id="main-header">
-    <img class="logo" src="/images/icon.png" />
-    <h1 class="heading" id="site-name">WORD QUIZ</h1>
-    <p class="paragraph" id="tagline">
-      Test your knowledge of random vocabulary!
-    </p>
-    <div class="menu-icon" id="menu-icon" onclick="toggleNav()">
-      <span class="menu-span"></span>
-    </div>
-    <div class="sidebar" id="sidebar">
-        <ul>
-          <li class="active"><a href="quiz.html">quiz</a></li>
-          <li><a href="results.html">scoresheet</a></li>
-          <li><a href="logout.html">logout</a></li>
-        </ul>
-      </div>
-  </header>
+    <header class="divider" id="main-header">
+        <img class="logo" src="/images/icon.png" />
+        <h1 class="heading" id="site-name">WORD QUIZ</h1>
+        <p class="paragraph" id="tagline">
+          Test your knowledge of random vocabulary!
+        </p>
+        <div class="menu-icon" id="menu-icon" onclick="toggleNav()">
+          <p id="hamwords" class="hamwords" onclick="toggleNav()">menu</p>
+        </div>
+  
+        <div class="sidebar" id="sidebar">
+          <ul>
+            <li><a href="quiz.html">quiz</a></li>
+            <li><a href="results.html">scoresheet</a></li>
+            <li><a href="logout.html">logout</a></li>
+          </ul>
+        </div>
+      </header>
   <main class="main-content">
     <h2>This is a randomly generated quiz!</h2>
     <div id="quiz"></div>
@@ -33,7 +34,7 @@
     <div id="myPopup" class="popup">
       <div class="popup-content">
         <h2> Great job! </h2>
-        <p id="scoreLocation"> Your score is </p>
+        <p id="scoreLocation"> Your score is: </p>
         <button id="closePopup">
           Restart
         </button>

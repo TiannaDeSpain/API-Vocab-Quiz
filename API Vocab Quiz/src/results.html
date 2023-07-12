@@ -14,21 +14,21 @@
         Test your knowledge of random vocabulary!
       </p>
       <div class="menu-icon" id="menu-icon" onclick="toggleNav()">
-        <span></span>
+        <p id="hamwords" class="hamwords" onclick="toggleNav()">menu</p>
       </div>
 
       <div class="sidebar" id="sidebar">
         <ul>
           <li><a href="quiz.html">quiz</a></li>
-          <li class="active"><a href="results.html">scoresheet</a></li>
+          <li><a href="results.html">scoresheet</a></li>
           <li><a href="logout.html">logout</a></li>
         </ul>
       </div>
     </header>
     <main class="main-content">
-      <h2>Here are your previous saved scores!</h2>
+      <h2 id="resultHeader">Here are your saved scores!</h2>
       <div id="scoreSheet"></div>
-      <button id="submit">Erase All</button>
+      <button id="erase">Erase All</button>
       <div id="results"></div>
     </main>
     <footer id="main-footer"></footer>

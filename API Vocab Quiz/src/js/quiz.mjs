@@ -86,7 +86,7 @@ export function scoring() {
 
     // Append score to the DOM
     let scoreLocation = document.getElementById("scoreLocation");
-    scoreLocation.textContent = score;
+    scoreLocation.textContent += score;
 
     // Show the popup
     const myPopup = document.getElementById("myPopup");
